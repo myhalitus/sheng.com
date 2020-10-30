@@ -16,5 +16,5 @@ datasource:
   driver-class-name: com.mysql.cj.jdbc.Driver
 
 mybatis:
-    type-aliases-package: com.xiajw.springbootDemo.pojo
+    type-aliases-package: com.bear.mapper
     mapper-locations: classpath:mapper/*.xml

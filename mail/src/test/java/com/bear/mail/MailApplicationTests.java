@@ -8,6 +8,8 @@ class MailApplicationTests {
 
     @Test
     void contextLoads() {
+
+
     }
 
 }

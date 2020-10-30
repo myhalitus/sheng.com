@@ -1,4 +1,4 @@
-package com.bear.Mapper.Dao;
+package com.bear.mapper.Dao;
 
 import com.bear.pojo.User;
 import org.apache.ibatis.annotations.Mapper;
