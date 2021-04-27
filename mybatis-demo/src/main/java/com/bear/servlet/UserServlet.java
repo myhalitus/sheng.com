@@ -23,7 +23,6 @@ public class UserServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String dos = req.getParameter("do");
         System.out.println(dos);
-
         if ("select".equals(dos)) {
             try {
                 List<User> list = userServiceImpl.selectUserService();
