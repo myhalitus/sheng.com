@@ -1,4 +1,4 @@
-<html lang="">
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <head>
     <meta charset="UTF-8">
     <title>Mybatis CURD 操作</title>

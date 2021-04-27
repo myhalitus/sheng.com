@@ -14,7 +14,4 @@ public interface UserMapper {
 
     public void updateUser(User uses) throws Exception;
 
-
-
-
 }

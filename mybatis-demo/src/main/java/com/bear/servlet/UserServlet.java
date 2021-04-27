@@ -26,6 +26,9 @@ public class UserServlet extends HttpServlet {
         if ("select".equals(dos)) {
             try {
                 List<User> list = userServiceImpl.selectUserService();
+                for (User user: list) {
+                    System.out.println(user.getUser_id() + " " + user.getUsername());
+                }
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -45,7 +48,7 @@ public class UserServlet extends HttpServlet {
             }
         } else if ("delete".equals(dos)) {
             try {
-                userServiceImpl.delUserService(10);
+                userServiceImpl.delUserService(8);
             } catch (Exception e) {
                 e.printStackTrace();
             }
