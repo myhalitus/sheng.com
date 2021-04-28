@@ -14,4 +14,19 @@
             ustatus
         from User where id = #{id}
     </select>
+
+    <insert id="InsertUser" parameterType="com.bear.pojo.User">
+        insert into user(id, username, ustatus) values (#{id}, #{userName}, #{ustatus})
+    </insert>
+
+
+    <update id="UpdateUser" parameterType="com.bear.pojo.User">
+        update user set id = #{id}, username = #{userName}, ustatus = #{ustatus}
+    </update>
+
+    <delete id="DeleteUser" parameterType="int">
+        delete from user where id = #{id}
+    </delete>
+
+
 </mapper>

@@ -18,7 +18,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public void insertUserService(User user) throws Exception {
         SqlSession session = SqlSessionUtil.getSession("mybatis-config.xml");
-        session.update("com.bear.mapper.insertUser");
+        session.insert("com.bear.mapper.insertUser");
     }
 
     @Override
