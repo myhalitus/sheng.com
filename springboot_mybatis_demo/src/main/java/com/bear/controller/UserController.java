@@ -42,4 +42,9 @@ public class UserController {
     public void DeleteUser() {
         userService.DeleteUser(1);
     }
+
+    @RequestMapping("findByPager")
+    public String FindByPager(){
+        return UserService.findByPager(1,1);
+    }
 }

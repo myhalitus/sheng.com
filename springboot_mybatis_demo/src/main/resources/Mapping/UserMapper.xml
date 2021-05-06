@@ -19,7 +19,6 @@
         insert into user(id, username, ustatus) values (#{id}, #{userName}, #{ustatus})
     </insert>
 
-
     <update id="UpdateUser" parameterType="com.bear.pojo.User">
         update user set id = #{id}, username = #{userName}, ustatus = #{ustatus}
     </update>
@@ -27,6 +26,14 @@
     <delete id="DeleteUser" parameterType="int">
         delete from user where id = #{id}
     </delete>
+
+    <select id="findByPager" resultType="com.bear.pojo.User">
+        select * from user limit #{page},#{size}
+    </select>
+
+    <select id="count" resultType="long">
+        select count(1) from user
+    </select>
 
 
 </mapper>
