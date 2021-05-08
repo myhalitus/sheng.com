@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bear.mapper.UserMapper">
+    <resultMap id="BaseResultMap" type="com.bear.pojo.User">
+        <result column="id" jdbcType="INTEGER" property="id"></result>
+        <result column="username" jdbcType="VARCHAR" property="userName"></result>
+        <result column="ustatus" jdbcType="VARCHAR" property="ustatus"></result>
+    </resultMap>
+
+    <select id="Sel" resultType="com.bear.pojo.User">
+        select
+            id,
+            username,
+            ustatus
+        from User where id = #{id}
+    </select>
+
+    <insert id="InsertUser" parameterType="com.bear.pojo.User">
+        insert into user(id, username, ustatus) values (#{id}, #{userName}, #{ustatus})
+    </insert>
+
+
+    <update id="UpdateUser" parameterType="com.bear.pojo.User">
+        update user set id = #{id}, username = #{userName}, ustatus = #{ustatus}
+    </update>
+
+    <delete id="DeleteUser" parameterType="int">
+        delete from user where id = #{id}
+    </delete>
+
+
+</mapper>
